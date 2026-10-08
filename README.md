@@ -1,1 +1,1 @@
-# Multi_thread_Zephr_Themal_monitor
+# Multi_thread_Zephyr_Themal_monitor
