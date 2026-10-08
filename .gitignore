@@ -1,0 +1,13 @@
+# Zephyr / west build output
+build/
+*.elf
+*.hex
+*.bin
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+

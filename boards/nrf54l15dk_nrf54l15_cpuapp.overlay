@@ -1,0 +1,44 @@
+/*
+ * Copyright 2019 NXP
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+ / {
+    zephyr,user {
+        io-channels = <&adc 0>;  
+    };
+};
+
+&adc {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    status = "okay";
+
+    channel@0 {
+        reg = <0>;
+        zephyr,gain = "ADC_GAIN_1_4";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,input-positive = <NRF_SAADC_AIN4>; /* AIN4 / P1.11 */
+        zephyr,resolution = <14>;
+    };
+};
+
+/*
+&lptmr1 {
+	interrupt-parent = <&intmux0_ch2>;
+};
+
+&intmux0_ch2 {
+	status = "okay";
+};
+
+&intmux0_ch3 {
+	status = "okay";
+};
+
+&generic_fsk {
+	interrupt-parent = <&intmux0_ch3>;
+	status = "okay";
+};
+ */
