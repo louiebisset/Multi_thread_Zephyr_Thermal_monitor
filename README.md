@@ -28,12 +28,3 @@ A temperature monitor for the nRF54L15 DK, built on Zephyr RTOS. It reads an ana
 
 - nRF54L15 DK
 - Analog temperature sensor
-
-## Build and flash
-
-```bash
-git clone https://github.com/louiebisset/Multi_thread_Zephyr_Thermal_monitor.git
-cd Multi_thread_Zephyr_Thermal_monitor
-west build -b nrf54l15dk/nrf54l15/cpuapp
-west flash
-```
